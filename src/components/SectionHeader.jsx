@@ -1,0 +1,13 @@
+function SectionHeader({ title, description, action }) {
+  return (
+    <div className="section-header">
+      <div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      {action}
+    </div>
+  );
+}
+
+export default SectionHeader;
