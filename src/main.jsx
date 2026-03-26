@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import App from "./App";
 import { FinanceProvider } from "./context/FinanceContext";
@@ -9,11 +9,11 @@ import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <FinanceProvider>
         <App />
         <ToastContainer position="top-right" autoClose={2500} />
       </FinanceProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
