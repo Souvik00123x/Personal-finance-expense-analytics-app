@@ -20,8 +20,8 @@ function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div>
-          <p className="eyebrow">Finance Tracker</p>
-          <h1>Personal Finance & Expense Analytics</h1>
+          <p className="eyebrow">Sim Fin</p>
+          <h1>Sim Fin</h1>
           <p className="sidebar-text">
             Track income, manage spending, follow budgets, and understand your money with simple visuals.
           </p>
