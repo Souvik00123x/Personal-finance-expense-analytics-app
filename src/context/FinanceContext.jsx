@@ -51,7 +51,7 @@ const getStoredBudget = () => {
 export function FinanceProvider({ children }) {
   const [transactions, setTransactions] = useState(getStoredTransactions);
   const [budget, setBudget] = useState(getStoredBudget);
-  const [loading, setLoading] = useState(true);
+  const [loading] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("finance_transactions", JSON.stringify(transactions));
@@ -60,11 +60,6 @@ export function FinanceProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("finance_budget", String(budget));
   }, [budget]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 600);
-    return () => clearTimeout(timer);
-  }, []);
 
   const addTransaction = (transaction) => {
     const newTransaction = { ...transaction, id: uuidv4() };
